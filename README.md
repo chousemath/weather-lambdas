@@ -1,0 +1,30 @@
+# Example output from OpenWeatherMap
+
+```python
+{'base': 'stations',
+ 'clouds': {'all': 75},
+ 'cod': 200,
+ 'coord': {'lat': 35, 'lon': 139},
+ 'dt': 1571973229,
+ 'id': 1851632,
+ 'main': {'humidity': 93,
+          'pressure': 1009,
+          'temp': 288.48,
+          'temp_max': 291.48,
+          'temp_min': 287.04},
+ 'name': 'Shuzenji',
+ 'rain': {'1h': 5.84},
+ 'sys': {'country': 'JP',
+         'id': 8070,
+         'sunrise': 1571950661,
+         'sunset': 1571990302,
+         'type': 1},
+ 'timezone': 32400,
+ 'visibility': 3000,
+ 'weather': [{'description': 'shower rain',
+              'icon': '09d',
+              'id': 521,
+              'main': 'Rain'},
+             {'description': 'mist', 'icon': '50d', 'id': 701, 'main': 'Mist'}],
+ 'wind': {'deg': 10, 'gust': 15.9, 'speed': 10.8}}
+```
