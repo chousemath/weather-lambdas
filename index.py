@@ -22,6 +22,8 @@ class OpenWeatherMap:
         self.cloudiness = api_response['clouds']['all']
         # Data receiving time (unix, UTC)
         self.data_received_at = api_response['dt']
+        # percentage humidity
+        self.humidity = api_response['main']['humidity']
 
 try:
     url = f'{roots["openweather"]}?lat=35&lon=139&appid={keys["openweather"]}'
