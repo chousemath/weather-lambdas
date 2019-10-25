@@ -15,11 +15,19 @@ roots = {
         }
 
 
-# https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22
+# https://openweathermap.org/weather-data
+class OpenWeatherMap:
+    def __init__(self, api_response):
+        # percentage cloudiness
+        self.cloudiness = api_response['clouds']['all']
+        # Data receiving time (unix, UTC)
+        self.data_received_at = api_response['dt']
+
 try:
     url = f'{roots["openweather"]}?lat=35&lon=139&appid={keys["openweather"]}'
     res = requests.get(url)
-    pprint(res.json())
+    owmap = OpenWeatherMap(res.json())
+    print(owmap.cloudiness, owmap.data_received_at)
 except Exception as e:
     print('there was an error')
     print(e)
